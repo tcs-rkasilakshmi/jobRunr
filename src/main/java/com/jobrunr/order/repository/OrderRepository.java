@@ -1,13 +1,15 @@
-package com.jobrunr.jobRunr.order.scheduler;
+package com.jobrunr.order.repository;
 
+import com.jobrunr.order.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.ZonedDateTime;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Repository
 public interface OrderRepository extends JpaRepository<Order, UUID> {
-	Optional<Order> findOrderByOpportunityId(String opportunityId);
-
+    List<Order> findByCreatedTimeGreaterThanEqual(ZonedDateTime date);
 }

@@ -1,10 +1,10 @@
-package com.jobrunr.jobRunr;
+package com.jobrunr;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JobRunrApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {

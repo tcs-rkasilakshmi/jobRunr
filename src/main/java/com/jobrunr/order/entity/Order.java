@@ -1,9 +1,10 @@
-package com.jobrunr.jobRunr.order.scheduler;
+package com.jobrunr.order.entity;
 
 import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.ZonedDateTime;
 import java.util.UUID;
 
 @Table(name = "orders")
@@ -18,4 +19,16 @@ public class Order implements Serializable {
 
     @Column(name = "opportunity_id")
     private String opportunityId;
+
+    @Column(name = "proposal_id")
+    private String proposalId;
+
+    @Column(name = "order_id")
+    private String orderId;
+
+    @Column(name = "status")
+    private String status;
+
+    @Column(name = "created_time")
+    private ZonedDateTime createdTime;
 }
